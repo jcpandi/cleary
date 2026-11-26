@@ -14,6 +14,12 @@ Run `npm run build` to produce a portable static site in `dist/`. `npm run previ
 
 Run `npm run check` to check the JavaScript syntax.
 
+## Deploy to Vercel
+
+Import this repository into Vercel with the repository root as the Root Directory. The included `vercel.json` sets the framework preset to Other, runs `npm run build`, and publishes `dist/`. These values override the corresponding project settings, so Vercel uses the folder this project actually builds.
+
+The build creates `dist/` during deployment; it does not need to be committed. If a previous deployment failed looking for `public`, deploy the latest commit containing `vercel.json`.
+
 ## Experience
 
 - Transparent navigation integrated into the full-screen hero, with a subtle contrast gradient and yellow quote button.
