@@ -1,0 +1,10 @@
+node_modules/
+.tools/
+.reference/
+dist/
+*.log
+.env
+.env.*
+.npmrc
+.codex/
+.agents/

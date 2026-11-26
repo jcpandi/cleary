@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f9f6" />
+    <meta name="description" content="Thoughtful home cleaning, delivered with care and attention to every detail. A Cleary hero concept." />
+    <title>Cleary — Making Every Space Spotless.</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="assets/cleaning-hero.png" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#hero-heading">Skip to content</a>
+    <main id="home">
+      <section class="hero-scroll" aria-label="Professional home cleaning">
+        <div class="hero-stage">
+          <div class="hero-media" aria-hidden="true">
+            <img class="hero-poster" src="assets/cleaning-hero.png" alt="" fetchpriority="high" width="1536" height="1024" />
+            <video class="hero-video" muted playsinline preload="auto" disablepictureinpicture disableremoteplayback tabindex="-1" poster="assets/cleaning-poster.jpg">
+              <source src="assets/cleaning-sequence.mp4" type="video/mp4" />
+            </video>
+            <div class="hero-wash"></div>
+            <div class="hero-header-shade"></div>
+          </div>
+
+          <header class="site-header">
+            <a class="wordmark" href="#home" aria-label="Cleary home">CLEARY</a>
+            <nav class="desktop-nav" aria-label="Main navigation">
+              <a class="nav-link active" href="#home" aria-current="page">Home</a>
+              <button class="nav-link" data-dialog="services">Services</button>
+              <button class="nav-link" data-dialog="about">About</button>
+              <button class="nav-link" data-dialog="contact">Contact</button>
+            </nav>
+            <div class="header-actions">
+              <button class="button button-yellow header-quote" data-dialog="quote">Get a Quote <svg aria-hidden="true"><use href="#arrow-right" /></svg></button>
+              <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+            </div>
+            <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation" hidden>
+              <a href="#home" aria-current="page">Home</a>
+              <button data-dialog="services">Services</button>
+              <button data-dialog="about">About</button>
+              <button data-dialog="contact">Contact</button>
+            </nav>
+          </header>
+
+          <div class="hero-content">
+            <p class="eyebrow">Professional home cleaning</p>
+            <h1 id="hero-heading" tabindex="-1">Making Every<br />Space Spotless.</h1>
+            <p class="hero-description">Thoughtful home cleaning, delivered with care and<br class="desktop-break" /> attention to every detail.</p>
+            <div class="hero-actions">
+              <button class="button button-yellow" data-dialog="quote">Get a Quote <svg aria-hidden="true"><use href="#arrow-right" /></svg></button>
+              <button class="button button-quiet" data-dialog="services">Explore Services</button>
+            </div>
+          </div>
+
+          <div class="hero-ending" aria-hidden="true" inert>
+            <p class="eyebrow">A fresh start, every time</p>
+            <h2>A little more clean.<br />A lot more comfort.</h2>
+            <p class="hero-description">Come home to a fresher, more comfortable space.<br class="desktop-break" /> We take care of the details, so you can unwind.</p>
+            <div class="hero-actions">
+              <button class="button button-yellow" data-dialog="quote">Get a Quote <svg aria-hidden="true"><use href="#arrow-right" /></svg></button>
+              <button class="button button-quiet" data-dialog="services">Explore Services</button>
+            </div>
+            <span class="ending-rule" aria-hidden="true"></span>
+          </div>
+
+          <div class="hero-assurances" aria-label="Our approach">
+            <div class="assurance"><svg aria-hidden="true"><use href="#team" /></svg><span>Professional Cleaning Team</span></div>
+            <div class="assurance"><svg aria-hidden="true"><use href="#care" /></svg><span>Care in Every Detail</span></div>
+          </div>
+
+          <button class="scroll-cue" aria-label="Play the cleaning animation"><span>Scroll to see the difference</span><svg aria-hidden="true"><use href="#arrow-down" /></svg></button>
+          <button class="motion-control" aria-label="Play cleaning animation" title="Play cleaning animation"><svg aria-hidden="true"><use href="#play" /></svg></button>
+          <div class="sequence-progress" aria-hidden="true"><span></span></div>
+        </div>
+      </section>
+
+    </main>
+
+    <button class="contact-pill button button-yellow" data-dialog="contact"><svg aria-hidden="true"><use href="#headset" /></svg><span>Talk with us</span></button>
+
+    <dialog id="site-dialog" aria-labelledby="dialog-title">
+      <button class="dialog-close" aria-label="Close dialog"><svg aria-hidden="true"><use href="#close" /></svg></button>
+      <div id="dialog-content"></div>
+    </dialog>
+
+    <template id="services-template">
+      <p class="eyebrow">Our services</p><h2 id="dialog-title">A clean for every home.</h2>
+      <p class="dialog-intro">Choose the care your space needs.</p>
+      <div class="service-list">
+        <button data-service="Recurring home cleaning"><span><strong>Recurring home cleaning</strong><small>A thoughtful refresh to keep your home feeling its best.</small></span><svg aria-hidden="true"><use href="#arrow-right" /></svg></button>
+        <button data-service="Deep cleaning"><span><strong>Deep cleaning</strong><small>Extra attention for the corners and details that need it.</small></span><svg aria-hidden="true"><use href="#arrow-right" /></svg></button>
+        <button data-service="Move-in / move-out cleaning"><span><strong>Move-in / move-out cleaning</strong><small>A fresh, clean start for your next chapter.</small></span><svg aria-hidden="true"><use href="#arrow-right" /></svg></button>
+      </div>
+    </template>
+    <template id="about-template">
+      <p class="eyebrow">The Cleary approach</p><h2 id="dialog-title">Care in every detail.</h2>
+      <p class="dialog-intro">A clean home should feel as good as it looks. Our approach is simple: thoughtful cleaning, attention to the little things, and care for the spaces you call home.</p>
+      <div class="about-note"><svg aria-hidden="true"><use href="#care" /></svg><p>A little more clean.<br />A lot more comfort.</p></div>
+      <button class="button button-yellow" data-dialog="services">Explore Services <svg aria-hidden="true"><use href="#arrow-right" /></svg></button>
+    </template>
+    <template id="contact-template">
+      <p class="eyebrow">Let's talk</p><h2 id="dialog-title">How can we help?</h2>
+      <p class="dialog-intro">Find the right clean for your space, or start putting together your cleaning request.</p>
+      <div class="contact-options">
+        <button class="button button-yellow" data-dialog="quote">Get a Quote <svg aria-hidden="true"><use href="#arrow-right" /></svg></button>
+        <button class="button button-outlined" data-dialog="services">Explore Services</button>
+      </div>
+    </template>
+    <template id="quote-template">
+      <p class="eyebrow">Make room for a little more comfort</p><h2 id="dialog-title">Tell us about your space.</h2>
+      <form id="quote-form">
+        <label>Your name<input name="name" autocomplete="name" placeholder="Full name" required maxlength="100" /></label>
+        <label>Email address<input type="email" name="email" autocomplete="email" placeholder="you@example.com" required maxlength="254" /></label>
+        <div class="form-row">
+          <label>Cleaning service<select name="service"><option>Recurring home cleaning</option><option>Deep cleaning</option><option>Move-in / move-out cleaning</option></select></label>
+          <label>Home size<select name="size"><option>Studio / 1 bedroom</option><option>2 bedrooms</option><option>3 bedrooms</option><option>4+ bedrooms</option></select></label>
+        </div>
+        <button type="submit" class="button button-yellow">Prepare my request <svg aria-hidden="true"><use href="#arrow-right" /></svg></button>
+        <p class="form-note">Preview only. Your details stay in this page and are not sent.</p>
+      </form>
+    </template>
+
+    <svg class="svg-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol id="arrow-right" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" /></symbol>
+      <symbol id="arrow-down" viewBox="0 0 24 24"><path d="M12 5v14m-6-6 6 6 6-6" /></symbol>
+      <symbol id="team" viewBox="0 0 28 28"><circle cx="14" cy="8" r="3" /><path d="M8 23v-4a6 6 0 0 1 12 0v4M3 22v-4a4 4 0 0 1 4-4m18 8v-4a4 4 0 0 0-4-4M7 5a3 3 0 0 0 0 6m14-6a3 3 0 0 1 0 6m-10 8v4m6-4v4" /></symbol>
+      <symbol id="care" viewBox="0 0 28 28"><path d="m15 3 1.3 3.7L20 8l-3.7 1.3L15 13l-1.3-3.7L10 8l3.7-1.3L15 3Zm7 7 .8 2.2L25 13l-2.2.8L22 16l-.8-2.2L19 13l2.2-.8L22 10ZM3 17h4v8H3zM7 19l4-3h4a2 2 0 0 1 0 4h-3m4 0 6-3a2 2 0 0 1 2 3l-6 4H7" /></symbol>
+      <symbol id="headset" viewBox="0 0 28 28"><path d="M5 16v-3a9 9 0 0 1 18 0v7a5 5 0 0 1-5 5h-3M5 13H3v8h5v-8H5Zm18 0h2v8h-5v-8h3Z" /><path d="M12 25h4" /></symbol>
+      <symbol id="close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6" /></symbol>
+      <symbol id="replay" viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 1 7M4 4v6h6" /></symbol>
+      <symbol id="play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7V5Z" /></symbol>
+      <symbol id="pause" viewBox="0 0 24 24"><path d="M9 5v14M16 5v14" /></symbol>
+    </svg>
+  </body>
+</html>
